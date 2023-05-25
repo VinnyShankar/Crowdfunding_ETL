@@ -2,7 +2,7 @@
 DROP TABLE IF EXISTS contacts CASCADE;
 DROP TABLE IF EXISTS category CASCADE;
 DROP TABLE IF EXISTS subcategory CASCADE;
-DROP TABLE IF EXISTS campaigns CASCADE;
+DROP TABLE IF EXISTS campaign CASCADE;
 
 -- CREATE TABLES
 
@@ -23,7 +23,7 @@ CREATE TABLE subcategory (
     subcategory VARCHAR NOT NULL
 );
 
-CREATE TABLE campaigns (
+CREATE TABLE campaign (
     cf_id INT NOT NULL,
     contact_id INT NOT NULL,
     company_name VARCHAR NOT NULL,
@@ -34,8 +34,8 @@ CREATE TABLE campaigns (
     backers_count INT NOT NULL,
     country VARCHAR NOT NULL,
     currency VARCHAR NOT NULL,
-    launched_date VARCHAR NOT NULL,
-    end_date VARCHAR NOT NULL,
+    launched_date DATE NOT NULL,
+    end_date DATE NOT NULL,
     category_id VARCHAR NOT NULL,
     subcategory_id VARCHAR NOT NULL,
 	FOREIGN KEY (contact_id) REFERENCES contacts(contact_id),
@@ -74,8 +74,8 @@ FROM 'D:\data\subcategory.csv'
 DELIMITER ','
 CSV HEADER;
 
--- Campaigns
-COPY campaigns (
+-- Campaign
+COPY campaign (
 	cf_id,
 	contact_id,
 	company_name,
@@ -99,4 +99,4 @@ CSV HEADER;
 SELECT * FROM contacts LIMIT 10;
 SELECT * FROM category;
 SELECT * FROM subcategory;
-SELECT * FROM campaigns LIMIT 10;
+SELECT * FROM campaign LIMIT 10;
