@@ -104,11 +104,11 @@ This is a broad overview of the ETL Steps:
 6. Verify the table creation by running a `SELECT` statement for each table.
 7. Import each CSV file into its corresponding SQL table.
 8. Verify that each table has the correct data by running a `SELECT` statement for each.
-    - SELECT * FROM contacts LIMIT 10;
+    - SELECT * FROM contacts LIMIT 10;          
     ![contacts](ETL_files/Screenshots/contacts_table.jpg)
-    - SELECT * FROM category;
+    - SELECT * FROM category;           
     ![category](ETL_files/Screenshots/category_table.jpg)
-    - SELECT * FROM subcategory;
+    - SELECT * FROM subcategory;            
     ![subcategory](ETL_files/Screenshots/subcategory_table.jpg)
-    - SELECT * FROM campaign LIMIT 10;
+    - SELECT * FROM campaign LIMIT 10;          
     ![campaign](ETL_files/Screenshots/campaign_table.jpg)
