@@ -96,11 +96,19 @@ This is a broad overview of the ETL Steps:
 1. Inspect the four CSV files, and then sketch an ERD of the tables by using [QuickDBD](https://www.quickdatabasediagrams.com/):
 ![image](ETL_files/entity_relationship_diagram.png "ERD")
 
-3. Use the information from the ERD to create a table schema for each CSV file.
+2. Use the information from the ERD to create a table schema for each CSV file.
     - Specified the data types, primary keys, foreign keys, and other constraints.
-4. Save the database schema as a Postgres file named `crowdfunding_db_schema.sql`
-5. Create a new Postgres database, named `crowdfunding_db`.
-6. Using the database schema, create the tables in the correct order to handle the foreign keys.
-7. Verify the table creation by running a `SELECT` statement for each table.
-8. Import each CSV file into its corresponding SQL table.
-9. Verify that each table has the correct data by running a `SELECT` statement for each.
+3. Save the database schema as a Postgres file named `crowdfunding_db_schema.sql`
+4. Create a new Postgres database, named `crowdfunding_db`.
+5. Using the database schema, create the tables in the correct order to handle the foreign keys.
+6. Verify the table creation by running a `SELECT` statement for each table.
+7. Import each CSV file into its corresponding SQL table.
+8. Verify that each table has the correct data by running a `SELECT` statement for each.
+    - SELECT * FROM contacts LIMIT 10;
+    ![contacts](ETL_files/Screenshots/contacts_table.jpg)
+    - SELECT * FROM category;
+    ![category](ETL_files/Screenshots/category_table.jpg)
+    - SELECT * FROM subcategory;
+    ![subcategory](ETL_files/Screenshots/subcategory_table.jpg)
+    - SELECT * FROM campaign LIMIT 10;
+    ![campaign](ETL_files/Screenshots/campaign_table.jpg)
